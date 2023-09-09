@@ -40,7 +40,7 @@ public class UserController {
 		MessageResponse message=new MessageResponse();
 		UserResponseModel urm=new UserResponseModel();
 		for(User u:users) {
-			if(u.getUserName().equals(user.getUserName())) {
+			if((u.getUserName().equals(user.getUserName())) || (u.getUserId().equals(user.getUserId()))) {
 				message.setMessage("this user exists already");
 				urm.setMessage(message);
 				return ResponseEntity.ok(urm);
