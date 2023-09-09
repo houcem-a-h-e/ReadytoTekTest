@@ -59,7 +59,7 @@ public class UserController {
 			
 		}
 		catch(Exception e) {
-			 message.setMessage("Could not upload the file !");
+			 message.setMessage("Could not process the request !");
 			return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
 		}
 	}
